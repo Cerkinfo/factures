@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Invoice Template - Cercle Informatique Version
+% LaTeX Template
+%
+% This template has been modified from a template downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Modifications by:
+% André Madeira Cortes
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the invoice.cls file to be in the same directory as 
+% the .tex file. The invoice.cls file provides the style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{invoice} 
+
+\def \tab {\hspace*{3ex}}
+
+\begin{document}
+
+\hfil{\large\bf Cercle Informatique de l'Université Libre de Bruxelles, A.S.B.L.}\hfil 
+\break 
+\hrule
+
+ULB - Campus de la Plaine CP 206 \hfill 02 650 54 88 \\ 
+Boulevard du Triomphe \\ B-1050 Bruxelles \hfill tresorier[AT]cerkinfo.be
+\\ \\
+% Infos Client
+{\bf Client:} \\
+\tab Nom nom nom \\ 
+\tab Adresse adresse \\ 
+\tab Num TVA if needed \\
+
+% Date Facture
+{\bf Date:} \\
+\tab Date \\ 
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF EXPENSES
+%----------------------------------------------------------------------------------------
+
+%COMMENT UTILISER:
+% \hourrow --> À utiliser pour des factures qui ont des prix par heure
+% \hourrow{Date}{NombreHeures}{PrixUnitaire}
+
+% \feerow --> Pour des prix fixes
+% \feerow{NomService et Date}{Prix}
+
+% \hline --> Crée une ligne horizontale
+
+% EXEMPLES: 
+
+\begin{invoiceTable}
+
+\feetype{NomService} 
+
+\hourrow{XX Mois 20XX}{3.5}{10} 
+
+\hline
+
+\feerow{Service: XX Mois 20XX}{250} 
+
+\end{invoiceTable}
+
+%----------------------------------------------------------------------------------------
+
+\vspace{1.5cm}
+
+Note: L'activité du Cercle Informatique n'est pas soumise à la TVA. \\
+À payer dans les 30 jours sur le compte NUMERO COMPTE \\
+
+\end{document}
+
